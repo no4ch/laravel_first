@@ -36,7 +36,6 @@
 
       $products = $this->products;
       //$products = [];
-
       return view('products.index', compact('products'));
     }
 

@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/footer/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ru/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,20 +152,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ru" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\users" />
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\products\layouts\blocks\footer" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\layouts" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\layouts" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\lang\ru" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\users" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\products\layouts\blocks\footer" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,6 +194,7 @@
       <workItem from="1585244671479" duration="5541000" />
       <workItem from="1585317407302" duration="1798000" />
       <workItem from="1585320299314" duration="9385000" />
+      <workItem from="1585335053283" duration="3357000" />
     </task>
     <servers />
   </component>
@@ -246,18 +225,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1296" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
-    <state x="1077" y="442" key="NewPhpFileDialog" timestamp="1585321221211">
+    <state x="1077" y="442" key="NewPhpFileDialog" timestamp="1585335381474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1077" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585321221211" />
+    <state x="1077" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585335381474" />
     <state x="634" y="150" width="1133" height="739" key="SettingsEditor" timestamp="1585329730995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="634" y="150" width="1133" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585329730995" />
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585320299720">
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585335054080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585320299720" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585335054080" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585327311988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

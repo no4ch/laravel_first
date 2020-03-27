@@ -11,17 +11,19 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1>Serafym Topal</h1>
+              <h1>@lang('about.name')</h1>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <p>I am a student of the Donbass State Engineering Academy. I’m studying web programming and am currently
-                 taking courses. I am fond of games and their creation.</p>
-              <p>This page is part of the homework for the Laravel framework. It was made with the help of Bootstrap and
-                 my, so far not quite direct, hands.</p>
+
+              @forelse(trans('about.description') as $description)
+                <p>{{ $description }}</p>
+              @empty
+                <p>Error</p>
+              @endforelse
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <img style="max-width: 400px; max-height: 400px;"
@@ -33,18 +35,22 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h2>Contacts for communication</h2>
+              <h2>@lang('about.contacts')</h2>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <p>Telephone: 8(800) 555 35 35</p>
-              <p>Mail: <a href="mailto: vk202164356@gmail.com">vk202164356@gmail.com</a></p>
-              <p>Skype: your_friend407975</p>
-              <p>Telegram: <a href="https://t.me/no4ch" target="_blank">@no4ch</a></p>
-              <p>Vk: <a href="https://vk.com/id_no4ch" target="_blank">Serafym Topal</a></p>
+              @php
+                $contacts = trans("about.contactsList");
+                $counter = 0;
+              @endphp
+              <p>{{ $contacts[$counter++] }}: 8800 555 35 35</p>
+              <p>{{ $contacts[$counter++] }}: <a href="mailto: vk202164356@gmail.com">vk202164356@gmail.com</a></p>
+              <p>{{ $contacts[$counter++] }}: your_friend407975</p>
+              <p>{{ $contacts[$counter++] }}: <a href="https://t.me/no4ch" target="_blank">@no4ch</a></p>
+              <p>{{ $contacts[$counter++] }}: <a href="https://vk.com/id_no4ch" target="_blank">Serafym Topal</a></p>
             </div>
           </div>
         </div>
