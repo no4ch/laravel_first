@@ -17,15 +17,22 @@
     return view('welcome');
   });
 
-  Route::get('/callback', function() {
-    return "1) Сделать маршрут, который возвращает результат работы callback function;";
+  Route::get('/products', 'ProductController@index');
+  Route::get('/products/{id}', 'ProductController@show');
+  Route::get('/users', 'UsersController@index');
+  Route::get('/about', function (){
+    return view('about');
   });
 
-  Route::get('/products', function() {
-    return view('products');
-    //2) сделать маршрут, который возвращает представление;
-  });
+  //  Route::get('/callback', function() {
+  //    return "1) Сделать маршрут, который возвращает результат работы callback function;";
+  //  });
 
-  Route::get('product/{name?}', function($name = NULL) {
-    return view('product', ["name" => $name]);
-  });
+  //  Route::get('/products', function() {
+  //    return view('products');
+  //    //2) сделать маршрут, который возвращает представление;
+  //  });
+
+  //  Route::get('product/{name?}', function($name = 1) {
+  //    return view('product', ["name" => $name]);
+  //  });

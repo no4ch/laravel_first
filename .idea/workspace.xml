@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="" />
+    <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/footer/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +42,25 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="EditorConfigPreviewManager">
     <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -112,23 +158,36 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZR4fubcvAgOFtc0DDBIj8XEVAQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/users" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\users" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\products\layouts\blocks\footer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\layouts" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\layouts" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\app\Models" />
     </key>
   </component>
@@ -151,41 +210,67 @@
       <workItem from="1584788679884" duration="1452000" />
       <workItem from="1584792299175" duration="957000" />
       <workItem from="1584879873138" duration="3614000" />
-      <workItem from="1584922440809" duration="2990000" />
+      <workItem from="1584922440809" duration="3562000" />
+      <workItem from="1585066206421" duration="3818000" />
+      <workItem from="1585157190701" duration="6266000" />
+      <workItem from="1585244671479" duration="5541000" />
+      <workItem from="1585317407302" duration="1798000" />
+      <workItem from="1585320299314" duration="9385000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="908" height="179" key="GridCell.Tab.0.bottom" timestamp="1584883303250">
+    <state x="764" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1585320967238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="908" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584883303250" />
-    <state width="908" height="179" key="GridCell.Tab.0.center" timestamp="1584883303250">
+    <state x="764" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585320967238" />
+    <state width="1296" height="179" key="GridCell.Tab.0.bottom" timestamp="1585078109968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="908" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584883303250" />
-    <state width="908" height="179" key="GridCell.Tab.0.left" timestamp="1584883303250">
+    <state width="1296" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
+    <state width="1296" height="179" key="GridCell.Tab.0.center" timestamp="1585078109968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="908" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584883303250" />
-    <state width="908" height="179" key="GridCell.Tab.0.right" timestamp="1584883303250">
+    <state width="1296" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
+    <state width="1296" height="179" key="GridCell.Tab.0.left" timestamp="1585078109968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="908" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584883303250" />
-    <state x="1077" y="442" key="NewPhpFileDialog" timestamp="1584923600590">
+    <state width="1296" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
+    <state width="1296" height="179" key="GridCell.Tab.0.right" timestamp="1585078109968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1077" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584923600590" />
-    <state x="922" y="150" key="SettingsEditor" timestamp="1584922536995">
+    <state width="1296" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
+    <state x="1077" y="442" key="NewPhpFileDialog" timestamp="1585321221211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="150" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584922536995" />
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1584922504498">
+    <state x="1077" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585321221211" />
+    <state x="634" y="150" width="1133" height="739" key="SettingsEditor" timestamp="1585329730995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584922504498" />
+    <state x="634" y="150" width="1133" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585329730995" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585320299720">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585320299720" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585327311988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585327311988" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
