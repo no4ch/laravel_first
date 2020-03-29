@@ -24,6 +24,8 @@
     return view('about');
   });
 
+  Route::view('/test', 'test');
+
   //  Route::get('/callback', function() {
   //    return "1) Сделать маршрут, который возвращает результат работы callback function;";
   //  });

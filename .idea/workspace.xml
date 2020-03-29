@@ -2,11 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/TestFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_180149_create_tests_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_181256_create_questions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_193043_create_answers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_193754_create_groups_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TestsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X014b42d6cee5c46bd76a54fcfbd85261.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X04a8eb8a8601ca882dbd80ef7da73763.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X161262e01963595528caf07aa31b457f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X20be8ab131bb0610e7607cf7fe7baa3a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X22eed0c89e4378349a6030e385288b49.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X355932c2e8746dbf3a53c5696af1f942.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X544ea03666aa0b6a1760c04aa1aff944.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X63b52193c667374c77f130c9999719da.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X6d6076b7235aa2c4476922e2e5585a83.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X7e6812b4754473088443d0a2a73abcb9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X7edc0e60076c3f1d4700b00793201cb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X82edcfa222a9053cde43e8c8680503cb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X8d7297523ee9de2c98d0447e66a74dfc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xa78e0f15e228dd749d77ace2ef79a7df.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xad436bbf2279734eac908f9b89681dd7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xcde01327c52f6a2f8321db1aae271901.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xcf99b68b940675e38bca55f1c4f3265c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xd354c34abcbe7239f0a4498f51eb3712.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xdee3337e844ed252cb1f5cb2b2f1a100.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xee1f0372ddab8488cb889e04107e8d7c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xf38bc75a782e765032dcf82821c226fb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xf6a1ac52cec96010b7ee4dd68e20e814.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelprojecttest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +65,34 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="testing_system: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="testing_system: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="tests: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="EditorConfigPreviewManager">
-    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/test.blade.php" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,7 +148,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
@@ -136,6 +193,11 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZR4fubcvAgOFtc0DDBIj8XEVAQ" />
@@ -149,24 +211,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/ru" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\layouts" />
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views" />
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\layouts" />
-      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\lang\ru" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\users" />
       <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\products\layouts\blocks\footer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\app\Models" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views\layouts" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\views" />
+      <recent name="D:\downloads\openserver\OSPanel\domains\laravelprojecttest\resources\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -174,6 +237,29 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.36734694" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@7520868b" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -195,6 +281,8 @@
       <workItem from="1585317407302" duration="1798000" />
       <workItem from="1585320299314" duration="9385000" />
       <workItem from="1585335053283" duration="3357000" />
+      <workItem from="1585438642310" duration="1068000" />
+      <workItem from="1585493053105" duration="9163000" />
     </task>
     <servers />
   </component>
@@ -205,38 +293,54 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="939" y="63" width="816" height="873" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585506022247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="939" y="63" width="816" height="873" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585506022247" />
     <state x="764" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1585320967238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="764" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585320967238" />
-    <state width="1296" height="179" key="GridCell.Tab.0.bottom" timestamp="1585078109968">
+    <state width="371" height="856" key="GridCell.Tab.0.bottom" timestamp="1585418382154">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1296" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
-    <state width="1296" height="179" key="GridCell.Tab.0.center" timestamp="1585078109968">
+    <state width="371" height="856" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585418382154" />
+    <state width="371" height="856" key="GridCell.Tab.0.center" timestamp="1585418382153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1296" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
-    <state width="1296" height="179" key="GridCell.Tab.0.left" timestamp="1585078109968">
+    <state width="371" height="856" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585418382153" />
+    <state width="371" height="856" key="GridCell.Tab.0.left" timestamp="1585418382153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1296" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
-    <state width="1296" height="179" key="GridCell.Tab.0.right" timestamp="1585078109968">
+    <state width="371" height="856" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585418382153" />
+    <state width="371" height="856" key="GridCell.Tab.0.right" timestamp="1585418382153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1296" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585078109968" />
+    <state width="371" height="856" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585418382153" />
+    <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1585418016929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="539" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1585418016929" />
+    <state x="654" y="317" key="NewPhpClassDialog" timestamp="1585505310030">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="654" y="317" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585505310030" />
     <state x="1077" y="442" key="NewPhpFileDialog" timestamp="1585335381474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1077" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585335381474" />
-    <state x="634" y="150" width="1133" height="739" key="SettingsEditor" timestamp="1585329730995">
+    <state x="634" y="150" width="1133" height="739" key="SettingsEditor" timestamp="1585506678850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="150" width="1133" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585329730995" />
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585335054080">
+    <state x="634" y="150" width="1133" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585506678850" />
+    <state x="681" y="249" width="540" height="540" key="StructurePopup" timestamp="1585499324472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585335054080" />
+    <state x="681" y="249" width="540" height="540" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1585499324472" />
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1585493056830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1135" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585493056830" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585327311988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
