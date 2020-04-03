@@ -22,7 +22,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="/users">Users</a>
           <a class="dropdown-item" href="/about">About us</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="/dashboard/tests">Create test</a>
         </div>
       </li>
     </ul>

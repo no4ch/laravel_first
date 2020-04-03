@@ -9,6 +9,6 @@ use Faker\Generator as Faker;
   $factory->define(Test::class, function (Faker $faker) {
     return [
       'name' => $faker->name,
-      'description' => $faker->realText(50, 15),
+      'description' => $faker->realText(rand(20, 50)),
     ];
 });

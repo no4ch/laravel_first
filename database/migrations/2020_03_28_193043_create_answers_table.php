@@ -15,12 +15,12 @@
     {
       Schema::create('answers', function (Blueprint $table) {
         $table->id();
-        $table->unsignedBigInteger('test_id');
+        //$table->unsignedBigInteger('test_id');
         $table->unsignedBigInteger('question_id');
         $table->string('answer');
         $table->timestamps();
 
-        $table->foreign('test_id')->references('id')->on('tests');
+        //$table->foreign('test_id')->references('id')->on('tests');
         $table->foreign('question_id')->references('id')->on('questions');
       });
     }

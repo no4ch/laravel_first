@@ -20,11 +20,14 @@
   Route::get('/products', 'ProductController@index');
   Route::get('/products/{id}', 'ProductController@show');
   Route::get('/users', 'UsersController@index');
+  Route::get('/users/{id}', 'UsersController@show');
   Route::get('/about', function (){
     return view('about');
   });
 
   Route::view('/test', 'test');
+
+  Route::view('/dashboard/tests', 'dashboard.index');
 
   //  Route::get('/callback', function() {
   //    return "1) Сделать маршрут, который возвращает результат работы callback function;";
