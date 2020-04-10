@@ -8,7 +8,7 @@
 
   $factory->define(Answer::class, function (Faker $faker) {
     return [
-      'question_id' => rand(1, 60),
-      'answer' => $faker->realText(rand(25, 50)),
+      'question_id' => rand(1, 20),
+      'answer' => $faker->realText(rand(35, 70)),
     ];
   });

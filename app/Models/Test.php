@@ -5,6 +5,9 @@
   use http\Env\Request;
   use Illuminate\Database\Eloquent\Model;
 
+  /**
+   * @method static create(array $data)
+   */
   class Test extends Model
   {
     /**
@@ -14,10 +17,25 @@
      */
     //protected $table = 'tests';
 
-    protected $fillable = ['name', 'description'];
 
-    public function store(Request $request)
+    protected $fillable = ['name'];
+
+    /**
+     * Get the parent of the activity feed record.
+     */
+    public function parentable()
     {
-
+      return $this->morphTo();
     }
+
+    public function getTests()
+    {
+      return Test::select('id', 'name')->get();
+    }
+
+    public function questions()
+    {
+      return $this->hasMany(Question::class);
+    }
+
   }

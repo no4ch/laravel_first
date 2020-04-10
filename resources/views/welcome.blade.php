@@ -86,8 +86,8 @@
 
     <div class="links">
 
-      <a href="/products">View elephants</a>
-      <a href="/users">Users</a>
+      <a href="/tests">Go to tests</a>
+      <a href="/dashboard">Dashboard</a>
       <a href="/about">About us</a>
       {{--      <a href="/product/grechka">2) getParameters</a>--}}
     </div>
