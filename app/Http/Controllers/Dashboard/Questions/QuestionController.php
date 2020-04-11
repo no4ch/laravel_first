@@ -43,9 +43,9 @@ class QuestionController extends Controller
    * @param  StoreRequest  $request
    * @return RedirectResponse
    */
-  public function store(StoreRequest $request)
+  public function store($test_id, StoreRequest $request)
   {
-    $data = $request->only(['test_id', 'question']);
+    $data = $request->only('question') + ['test_id' => $test_id];
 
     Question::create($data);
     session()->flash('success', 'Question added successfully');

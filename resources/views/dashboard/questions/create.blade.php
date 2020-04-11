@@ -18,11 +18,8 @@
       <a class="btn btn-primary btn-lg" href="{{ route('dashboard.') }}" role="button">Back</a>
     </div>
 
-    {!! Form::open(['route' => ['dashboard.questions.store', $test_id]]) !!}
+    {!! Form::open(['route' => ['dashboard.tests.questions.store', $test_id]]) !!}
     @include('dashboard.questions.blocks.form.fields')
-
-    {!! Form::hidden('test_id', $test_id) !!}
-
     <div class="form-group">
       {!! Form::submit('Add', ['class' => 'btn btn-success']); !!}
     </div>
