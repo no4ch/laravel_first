@@ -33,6 +33,7 @@ Route::view('/test', 'test');
  */
 
 Route::name('dashboard.')
+  ->middleware(['auth', 'roles:admin'])
   ->namespace('Dashboard')
   ->prefix('dashboard')
   ->group(function () {
@@ -56,7 +57,12 @@ Route::name('dashboard.')
       });
 
     Route::resource('tests.questions', 'Questions\QuestionController');
+    Route::resource('questions.answers', 'Answers\AnswerController');
   });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

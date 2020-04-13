@@ -9,7 +9,7 @@ class TestController extends Controller
 {
   public function index()
   {
-    $tests = (new Test)->getTests();
+    $tests = Test::getTests();
 
     return view('tests.index', compact('tests'));
   }

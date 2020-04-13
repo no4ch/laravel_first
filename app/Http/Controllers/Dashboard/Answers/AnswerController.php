@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Dashboard\Answers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Answer\StoreRequest;
 use App\Http\Requests\Answer\UpdateRequest;
 use App\Models\Answer;
 use Exception;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -26,22 +28,29 @@ class AnswerController extends Controller
   /**
    * Show the form for creating a new resource.
    *
-   * @return Response
+   * @param $question_id
+   * @return View
    */
-  public function create()
+  public function create($question_id): View
   {
-    //
+    return view('dashboard.answers.create', compact('question_id'));
   }
 
   /**
    * Store a newly created resource in storage.
    *
-   * @param  \Illuminate\Http\Request  $request
-   * @return Response
+   * @param $question_id
+   * @param  StoreRequest  $request
+   * @return RedirectResponse
    */
-  public function store(Request $request)
+  public function store($question_id, StoreRequest $request): RedirectResponse
   {
-    //
+    $data = $request->only('answer') + ['question_id' => $question_id];
+
+    Answer::create($data);
+    session()->flash('success', "Answer added successfully in question #$question_id");
+
+    return redirect()->route('dashboard.');
   }
 
   /**
@@ -52,7 +61,7 @@ class AnswerController extends Controller
    */
   public function show($id)
   {
-    //
+    return redirect()->route('dashboard.');
   }
 
   /**

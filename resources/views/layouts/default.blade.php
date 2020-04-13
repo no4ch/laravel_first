@@ -26,17 +26,17 @@
   </style>
 </head>
 <body>
+<div id="app">
+  @include('layouts.blocks.nav.index')
 
-@include('layouts.blocks.nav.index')
-
-<main role="main">
-{{--  <div class="jumbotron">--}}
+  <main role="main">
+    {{--  <div class="jumbotron">--}}
     @yield('content')
-{{--  </div>--}}
-</main>
+    {{--  </div>--}}
+  </main>
 
-@include('layouts.blocks.footer.index')
-
+  @include('layouts.blocks.footer.index')
+</div>
 <script src="{{ mix('/js/app.js') }}"></script>
 
 </body>

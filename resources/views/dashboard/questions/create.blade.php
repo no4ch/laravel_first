@@ -25,8 +25,5 @@
     </div>
     {!! Form::close() !!}
 
-    <form action="{{ route("dashboard.questions.store", $test_id) }}" method="POST">
-    </form>
-
   </div>
 @endsection

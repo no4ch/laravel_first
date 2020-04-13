@@ -93,6 +93,10 @@
                         <td colspan="5">
                           <div class="collapse" id="collapseQuestion{{ $loop->index }}">
                             <div class="card card-body">
+                              <div class="pb-3">
+                                <a class="btn btn-primary btn-lg" href="{{ route("dashboard.questions.answers.create", $question->id) }}"
+                                   role="button">Add answer</a>
+                              </div>
                               <table class="table table-striped">
                                 <thead>
                                 <tr>

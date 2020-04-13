@@ -3,7 +3,10 @@
   namespace App\Models;
 
   use http\Env\Request;
+  use Illuminate\Database\Eloquent\Builder;
+  use Illuminate\Database\Eloquent\Collection;
   use Illuminate\Database\Eloquent\Model;
+  use Illuminate\Database\Eloquent\Relations\HasMany;
 
   /**
    * @method static create(array $data)
@@ -28,11 +31,18 @@
       return $this->morphTo();
     }
 
-    public function getTests()
+    /**
+     * @param  Builder  $query
+     * @return Collection
+     */
+    public function scopeGetTests(Builder $query)
     {
-      return Test::select('id', 'name')->get();
+      return $query->select('id', 'name')->withCount('questions')->orderBy('id', 'desc')->get();
     }
 
+    /**
+     * @return HasMany
+     */
     public function questions()
     {
       return $this->hasMany(Question::class);
