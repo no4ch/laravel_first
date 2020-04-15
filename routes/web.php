@@ -17,16 +17,20 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('tests', 'TestController@index');
-Route::get('tests/{id}', 'TestController@show');
+/**
+ * Routes for tests
+ */
 
-Route::get('users', 'UsersController@index');
-Route::get('users/{id}', 'UsersController@show');
-Route::get('about', function () {
-  return view('about');
-});
+Route::name('tests.')
+  ->namespace('Tests')
+  ->prefix('tests')
+  ->group(function (){
 
-Route::view('/test', 'test');
+    Route::get('/', 'TestController@index');
+
+    Route::get('{id}', 'TestController@show')
+      ->middleware('auth');
+  });
 
 /**
  * Routes for Dashboard
@@ -62,8 +66,8 @@ Route::name('dashboard.')
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/**
+ * Routes for Spa
+ */
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');

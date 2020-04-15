@@ -1,4 +1,7 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
+@extends('layouts.default')
+
+@section('title', 'Confirm')
 
 @section('content')
 <div class="container">

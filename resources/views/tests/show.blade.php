@@ -1,15 +1,14 @@
 @extends('layouts.default')
 
-@section('title', 'Product: '.$product['header'])
+@section('title', "Test # $test->id ")
 
 @section('content')
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">{{ $product['header'] }}</h1>
-      @for($i=0; $i<3; $i++)
-        <p>{{$product['description']}}</p>
-      @endfor
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">{{ $product['button'] }} >></a></p>
-    </div>
+{{--  @dump($test)--}}
+  <div id="test">
+    <test :test="{{ json_encode($test) }}"></test>
   </div>
 @endsection
+
+@push('scripts')
+  <script src="{{ mix('/js/test.js') }}"></script>
+@endpush

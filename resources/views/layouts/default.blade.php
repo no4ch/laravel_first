@@ -26,18 +26,18 @@
   </style>
 </head>
 <body>
-<div id="app">
-  @include('layouts.blocks.nav.index')
 
-  <main role="main">
-    {{--  <div class="jumbotron">--}}
-    @yield('content')
-    {{--  </div>--}}
-  </main>
+@include('layouts.blocks.nav.index')
 
-  @include('layouts.blocks.footer.index')
-</div>
+<main role="main">
+
+  @yield('content')
+
+</main>
+
+@include('layouts.blocks.footer.index')
+
 <script src="{{ mix('/js/app.js') }}"></script>
-
+@stack('scripts')
 </body>
 </html>
