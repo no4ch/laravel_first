@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>@yield('title', 'No Name')</title>
   <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+  <link rel="stylesheet" href="{{ mix('/css/all.css') }}">
   <style>
     .top-right {
       position: absolute;

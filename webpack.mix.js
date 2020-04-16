@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/vue-router-page.js', 'public/js')
-    .js('resources/js/test.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+  .js('resources/js/vue-router-page.js', 'public/js')
+  .js('resources/js/test.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
+  .styles('resources/css/css.css', 'public/css/all.css');

@@ -48,7 +48,7 @@ class QuestionController extends Controller
     $data = $request->only('question') + ['test_id' => $test_id];
 
     Question::create($data);
-    session()->flash('success', 'Question added successfully');
+    session()->flash('success', "Question for test #$test_id created successfully");
 
     return redirect()->route('dashboard.');
   }
@@ -80,7 +80,7 @@ class QuestionController extends Controller
     $data = $request->only(['question', 'test_id']);
 
     $question->update($data);
-    session()->flash('success', 'Question updated successfully');
+    session()->flash('success', "Question #$question->id for test #$question->test_id successfully changed");
 
     return redirect()->route('dashboard.');
   }

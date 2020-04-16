@@ -9,5 +9,14 @@
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
 
+    <div class="form-group">
+      {!! Form::label('status', 'Status') !!}
+      {!! Form::select('status', ['true' => 'True', 'false' => 'False'], $answer->status ?? 'false', ['class' => 'custom-select']) !!}
+    </div>
+
+    @error('status')
+    <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+
   </div>
 </div>

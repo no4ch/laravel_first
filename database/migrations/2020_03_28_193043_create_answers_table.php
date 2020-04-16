@@ -18,6 +18,7 @@ class CreateAnswersTable extends Migration
       //$table->unsignedBigInteger('test_id');
       $table->unsignedBigInteger('question_id');
       $table->string('answer');
+      $table->string('status', 10)->default('false');
       $table->timestamps();
 
       //$table->foreign('test_id')->references('id')->on('tests');

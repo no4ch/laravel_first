@@ -23,7 +23,7 @@
           <td>{{ $test->name }}</td>
           <td>{{ $test->questions_count }}</td>
           <td>
-            Check test
+            <a href="{{ route('tests.', $test->id) }}">Take the test</a>
           </td>
         </tr>
       @empty
@@ -32,6 +32,6 @@
       </tbody>
     </table>
     <hr>
-
+    {{ $tests->links() }}
   </div> <!-- /container -->
 @endsection

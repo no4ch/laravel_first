@@ -10,14 +10,14 @@ class TestController extends Controller
 {
   public function index()
   {
-    $tests = Test::getTests();
+    $tests = Test::getTests()->paginate(5);
 
     return view('tests.index', compact('tests'));
   }
 
   public function show($id)
   {
-    $test = Test::select('id', 'name')->where('id', $id)
+    $test = Test::select('id', 'name')->where([['id', $id], ['status', 'completed']])
       ->with('questions.answers:id,question_id,answer')
       ->with('questions:id,test_id,question')
       ->firstOrFail();
@@ -26,3 +26,10 @@ class TestController extends Controller
     return view('tests.show', compact('test'));
   }
 }
+
+//$test = Test::select('id', 'name')->where('id', $id)
+//  ->with(['questions.answers' => function($query){
+//    $query->select('id','question_id','answer')->where('status', 'true');
+//  }])
+//  ->with('questions:id,test_id,question')
+//  ->firstOrFail();

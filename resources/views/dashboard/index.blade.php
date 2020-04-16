@@ -20,8 +20,8 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Test name</th>
-
           <th scope="col">Updated at</th>
+          <th scope="col">Status</th>
           <th scope="col">Actions</th>
           <th></th>
         </tr>
@@ -31,8 +31,8 @@
           <tr>
             <td>{{ $test->id }}</td>
             <td>{{ $test->name }}</td>
-
             <td>{{ $test->updated_at }}</td>
+            <td>{{ $test->status }}</td>
             <td>
               <a class="badge badge-primary pl-2 pr-2 pt-1 pb-1" href="{{ route('dashboard.tests.edit', $test->id) }}">Edit</a>
               <form id="destroy-form" action="{{ route('dashboard.tests.destroy', $test->id) }}" method="POST">
@@ -49,7 +49,7 @@
             </td>
           </tr>
           <tr>
-            <td colspan="5">
+            <td colspan="6">
               <div class="collapse" id="collapse{{ $loop->index }}">
                 <div class="card card-body">
                   <div class="pb-3">
@@ -108,7 +108,7 @@
                                 </thead>
                                 <tbody>
                                 @forelse($question->answers as $answer)
-                                  <tr>
+                                  <tr {{ $answer->status!=='true'?:"class=bg-success" }}>
                                     <td>{{ $answer->id }}</td>
                                     <td>{{ $answer->answer }}</td>
                                     <td>{{ $answer->updated_at }}</td>

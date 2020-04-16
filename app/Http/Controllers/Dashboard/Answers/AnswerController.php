@@ -45,7 +45,7 @@ class AnswerController extends Controller
    */
   public function store($question_id, StoreRequest $request): RedirectResponse
   {
-    $data = $request->only('answer') + ['question_id' => $question_id];
+    $data = $request->only('answer', 'status') + ['question_id' => $question_id];
 
     Answer::create($data);
     session()->flash('success', "Answer added successfully in question #$question_id");
@@ -57,7 +57,7 @@ class AnswerController extends Controller
    * Display the specified resource.
    *
    * @param  int  $id
-   * @return Response
+   * @return RedirectResponse
    */
   public function show($id)
   {
@@ -84,10 +84,10 @@ class AnswerController extends Controller
    */
   public function update(UpdateRequest $request, Answer $answer)
   {
-    $data = $request->only(['answer']);
-
+    $data = $request->only(['answer', 'status']);
+    //dd($data);
     $answer->update($data);
-    session()->flash('success', 'Answer updated successfully');
+    session()->flash('success', "Answer #$answer->id for question #$answer->question_id  successfully changed");
 
     return redirect()->route('dashboard.');
   }

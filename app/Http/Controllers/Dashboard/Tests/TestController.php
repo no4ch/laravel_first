@@ -46,7 +46,7 @@ class TestController extends Controller
    */
   public function store(StoreRequest $request)
   {
-    $data = $request->only(['name', 'description']);
+    $data = $request->only(['name', 'description', 'status']);
 
     Test::create($data);
     session()->flash('success', 'Test added successfully');
@@ -68,8 +68,8 @@ class TestController extends Controller
   /**
    * Show the form for editing the specified resource.
    *
-   * @param  int  $id
-   * @return Response
+   * @param  Test  $test
+   * @return View
    */
   public function edit(Test $test)
   {
@@ -78,10 +78,10 @@ class TestController extends Controller
 
   public function update(UpdateRequest $request, Test $test)
   {
-    $data = $request->only(['name', 'description']);
+    $data = $request->only(['name', 'description', 'status']);
 
     $test->update($data);
-    session()->flash('success', 'Test updated successfully');
+    session()->flash('success', "Test #$test->id updated successfully");
 
     return redirect()->route('dashboard.');
   }

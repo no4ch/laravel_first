@@ -1966,15 +1966,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['test'],
   name: "Test",
   data: function data() {
     return {
       counter: 0,
+      testing: true,
       possibleAnswer: "",
       answers: [],
-      questionsCount: this.test.questions.length
+      questionsCount: this.test.questions.length,
+      result: "loading ...",
+      endTest: false
     };
   },
   methods: {
@@ -1990,11 +2001,41 @@ __webpack_require__.r(__webpack_exports__);
           t.counter++;
         }
       } else {
-        t.counter = 0;
+        t.testing = false;
+        t.counter = 0; //убрать иф
+
+        if (t.counter < t.questionsCount) {
+          t.answers.push(t.possibleAnswer);
+          t.possibleAnswer = "";
+        }
+
+        var answers = JSON.stringify(t.answers);
+        axios.post('/api/results', {
+          answers: answers,
+          id: t.test.id
+        }).then(function (response) {
+          t.checkResults(response.data);
+        })["catch"](function (error) {
+          console.log(error);
+        });
       }
+    },
+    checkResults: function checkResults(result) {
+      var t = this;
+
+      if (result !== 'error') {
+        console.log(result);
+        t.result = result;
+      } else {
+        t.result = 'Error';
+      }
+
+      t.endTest = true;
     }
   },
-  watch: {}
+  updated: function updated() {
+    if (this.endTest) this.$destroy();
+  }
 });
 
 /***/ }),
@@ -38074,7 +38115,7 @@ var render = function() {
       _c("br"),
       _c("br"),
       _vm._v(" "),
-      _vm.questionsCount > 0
+      _vm.questionsCount > 0 && _vm.testing
         ? _c(
             "div",
             { staticClass: "container mb-3" },
@@ -38091,36 +38132,45 @@ var render = function() {
                 index
               ) {
                 return _vm.test.questions[_vm.counter].answers.length > 0
-                  ? _c("div", { staticClass: "form-check pt-2" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.possibleAnswer,
-                            expression: "possibleAnswer"
-                          }
-                        ],
-                        staticClass: "form-check-input",
-                        attrs: { type: "radio", id: index },
-                        domProps: {
-                          value: index,
-                          checked: _vm._q(_vm.possibleAnswer, index)
-                        },
-                        on: {
-                          change: function($event) {
-                            _vm.possibleAnswer = index
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
+                  ? _c("div", { staticClass: "form-check" }, [
                       _c(
                         "label",
                         {
-                          staticClass: "form-check-label cursor-pointer",
+                          staticClass:
+                            "form-check-label cursor-pointer pt-1 pb-1",
                           attrs: { for: index }
                         },
                         [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.possibleAnswer,
+                                expression: "possibleAnswer"
+                              }
+                            ],
+                            staticClass: "form-check-input",
+                            attrs: { type: "radio", id: index },
+                            domProps: {
+                              value:
+                                _vm.test.questions[_vm.counter].answers[index]
+                                  .id,
+                              checked: _vm._q(
+                                _vm.possibleAnswer,
+                                _vm.test.questions[_vm.counter].answers[index]
+                                  .id
+                              )
+                            },
+                            on: {
+                              change: function($event) {
+                                _vm.possibleAnswer =
+                                  _vm.test.questions[_vm.counter].answers[
+                                    index
+                                  ].id
+                              }
+                            }
+                          }),
                           _vm._v(
                             "\n          " +
                               _vm._s(
@@ -38138,7 +38188,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-primary btn-lg mt-3",
+                  staticClass: "btn btn-outline-primary btn-lg mt-3",
                   attrs: { type: "button" },
                   on: { click: _vm.btnClick }
                 },
@@ -38147,7 +38197,23 @@ var render = function() {
             ],
             2
           )
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.testing
+        ? _c("div", { staticClass: "result" }, [
+            _c("h3", [
+              _vm._v("The number of correct answers "),
+              _c("strong", [_vm._v(_vm._s(_vm.result))])
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _c("a", { staticClass: "btn btn-primary", attrs: { href: "/tests" } }, [
+        _vm._v("Back to tests")
+      ])
     ])
   ])
 }

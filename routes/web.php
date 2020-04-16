@@ -71,3 +71,5 @@ Auth::routes();
  */
 
 Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
+
+Route::post('/api/results', 'Api\ResultsController@checkResults');

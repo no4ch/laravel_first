@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Test;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateRequest extends FormRequest
 {
@@ -23,8 +24,18 @@ class UpdateRequest extends FormRequest
    */
   public function rules()
   {
+    $statusFields = [
+      'completed', 'developing'
+    ];
+
     return [
-      'name' => ['required', 'string', 'max:255']
+      'name' => [
+        'required', 'string', 'max:255'
+      ],
+
+      'status' => [
+        'required', Rule::in($statusFields)
+      ]
     ];
   }
 }
