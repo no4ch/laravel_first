@@ -73,6 +73,7 @@ Route::name('dashboard.')
   });
 
 Auth::routes();
+Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider')->name('login.facebook');
 
 /**
  * Routes for Spa
@@ -82,6 +83,6 @@ Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::post('/api/results', 'Api\ResultsController@checkResults');
 
-Route::get('test', function (){
-  return view('test');
-});
+//Route::get('test', function (){
+//  return view('test');
+//});

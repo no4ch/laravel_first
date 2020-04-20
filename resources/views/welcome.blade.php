@@ -85,10 +85,8 @@
     </div>
 
     <div class="links">
-
       <a href="/tests">Go to tests</a>
       <a href="/about/app/home">About us</a>
-      {{--      <a href="/product/grechka">2) getParameters</a>--}}
     </div>
   </div>
 </div>

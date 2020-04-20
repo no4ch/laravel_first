@@ -72,6 +72,12 @@
                   @endif
                 </div>
               </div>
+
+              <div class="form-group row mb-0 mt-4">
+                <div class="col-md-8 offset-md-4">
+                  <a href="{{ route('login.facebook') }}">Login with Facebook</a>
+                </div>
+              </div>
             </form>
           </div>
         </div>
