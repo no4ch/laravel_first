@@ -4,9 +4,13 @@
       <h1>Test: <strong>{{ test.name}}</strong></h1>
       <h2>Number of questions: <strong>{{ questionsCount }}</strong></h2>
 
-      <br><br>
+      <br>
 
       <div class="container mb-3" v-if="questionsCount > 0 && testing">
+        <div class="question-image" v-if="test.questions[counter].file">
+          <img :src="'/storage/' + test.questions[counter].file.path" alt="">
+          <hr>
+        </div>
         <p>{{ counter+1 }}) Question: <strong>{{test.questions[counter].question}}</strong></p>
 
         <div class="form-check" v-for="(value, index) in test.questions[counter].answers.length"
@@ -77,6 +81,7 @@
             t.checkResults(response.data);
           })
           .catch(error => {
+            //запилить ошибки
             console.log(error);
           });
 
@@ -105,6 +110,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .question-image > img{
+    max-height: 250px;
+    max-width: 100%;
   }
 </style>
 

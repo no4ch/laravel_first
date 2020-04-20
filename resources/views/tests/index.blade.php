@@ -13,18 +13,16 @@
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Questions</th>
-        <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
       @forelse($tests as $test)
         <tr>
           <td scope="row">{{ $test->id }}</td>
-          <td>{{ $test->name }}</td>
-          <td>{{ $test->questions_count }}</td>
           <td>
-            <a href="{{ route('tests.', $test->id) }}">Take the test</a>
+            <a href="{{ route('tests.', $test->id) }}">{{ $test->name }}</a>
           </td>
+          <td>{{ $test->questions_count }}</td>
         </tr>
       @empty
         <h2>Тесты не были загружены</h2>

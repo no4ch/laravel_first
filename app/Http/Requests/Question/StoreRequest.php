@@ -24,7 +24,8 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-          'question' => ['required', 'string', 'max:255']
+          'question' => ['required', 'string', 'max:255'],
+          'file_id' => ['nullable', 'numeric']
         ];
     }
 }

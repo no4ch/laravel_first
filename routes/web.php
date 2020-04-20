@@ -60,8 +60,16 @@ Route::name('dashboard.')
         Route::resource('answers', 'AnswerController');
       });
 
+    Route::namespace('Files')
+      ->group(function (){
+        Route::resource('files', 'FileController');
+      });
+
     Route::resource('tests.questions', 'Questions\QuestionController');
     Route::resource('questions.answers', 'Answers\AnswerController');
+
+//    Route::get('files', 'Files\FileController@index')->name('files.index');
+//    Route::post('files/upload', 'Files\FileController@upload')->name('files.upload');
   });
 
 Auth::routes();
@@ -73,3 +81,7 @@ Auth::routes();
 Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::post('/api/results', 'Api\ResultsController@checkResults');
+
+Route::get('test', function (){
+  return view('test');
+});

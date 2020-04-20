@@ -21,6 +21,12 @@
               Add new test
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('dashboard.files.index') }}">
+              <span data-feather="file-text"></span>
+              Check files
+            </a>
+          </li>
         </ul>
   </div>
 </nav>

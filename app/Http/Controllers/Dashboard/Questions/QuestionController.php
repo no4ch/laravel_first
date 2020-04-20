@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Questions;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Question\StoreRequest;
 use App\Http\Requests\Question\UpdateRequest;
+use App\Models\File;
 use App\Models\Question;
 use App\Models\Test;
 use Illuminate\Contracts\View\Factory;
@@ -28,7 +29,7 @@ class QuestionController extends Controller
   /**
    * Show the form for creating a new resource.
    *
-   * @param  Test  $test
+   * @param $test_id
    * @return Factory|View
    */
   public function create($test_id)
@@ -45,7 +46,14 @@ class QuestionController extends Controller
    */
   public function store($test_id, StoreRequest $request)
   {
-    $data = $request->only('question') + ['test_id' => $test_id];
+    $data = $request->only('question', 'file_id') + ['test_id' => $test_id];
+
+    if (!empty($data['file_id'])) {
+      if (!File::where('id', $data['file_id'])->exists()) {
+        session()->flash('danger', "File not found. Question has not been added.");
+        return redirect()->route('dashboard.');
+      }
+    }
 
     Question::create($data);
     session()->flash('success', "Question for test #$test_id created successfully");
@@ -72,13 +80,20 @@ class QuestionController extends Controller
    */
   public function edit(Question $question)
   {
-    return view('dashboard.questions.edit', compact('question'));
+    $files = File::select('id', 'name')->get();
+
+    return view('dashboard.questions.edit', compact(['question', 'files']));
   }
 
   public function update(UpdateRequest $request, Question $question)
   {
-    $data = $request->only(['question', 'test_id']);
-
+    $data = $request->only(['question', 'test_id', 'file_id']);
+    if (!empty($data['file_id'])) {
+      if (!File::where('id', $data['file_id'])->exists()) {
+        session()->flash('danger', "File not found. The question has not been changed");
+        return redirect()->route('dashboard.');
+      }
+    }
     $question->update($data);
     session()->flash('success', "Question #$question->id for test #$question->test_id successfully changed");
 

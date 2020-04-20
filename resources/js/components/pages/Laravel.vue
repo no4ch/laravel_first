@@ -3,14 +3,12 @@
     <h1>Laravel</h1>
     <div class="container">
       <h2>The PHP Framework for Web Artisans</h2>
-      <p>img</p>
-      <p>Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation —
-         freeing you to create without sweating the small things.</p>
+      <img src="/storage/about-images/laravel1.png" alt="">
     </div>
 
     <div class="container">
       <h2>The Laravel Ecosystem</h2>
-      <p>img</p>
+      <img src="/storage/about-images/laravel2.png" alt="">
 
     </div>
   </div>
@@ -23,5 +21,7 @@
 </script>
 
 <style scoped>
-
+  img {
+    max-width: 100%;
+  }
 </style>

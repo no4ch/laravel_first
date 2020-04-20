@@ -19,17 +19,11 @@ class TestController extends Controller
   {
     $test = Test::select('id', 'name')->where([['id', $id], ['status', 'completed']])
       ->with('questions.answers:id,question_id,answer')
-      ->with('questions:id,test_id,question')
+      ->with('questions.file:id,path')
+      ->with('questions:id,test_id,file_id,question')
       ->firstOrFail();
     //заделать scopeGetTest
     //    dd($test);
     return view('tests.show', compact('test'));
   }
 }
-
-//$test = Test::select('id', 'name')->where('id', $id)
-//  ->with(['questions.answers' => function($query){
-//    $query->select('id','question_id','answer')->where('status', 'true');
-//  }])
-//  ->with('questions:id,test_id,question')
-//  ->firstOrFail();

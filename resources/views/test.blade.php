@@ -1,28 +1,16 @@
 @php
 
+use App\Models\File;
 use App\Models\Question;
 use App\Models\Test;
 
+$data = Question::select('*')->with('file:id,path')->get();
 
-$questions = Question::select('id', 'test_id', 'question', 'created_at')
-        ->with('test')
-        ->orderBy('test_id', 'desc')
-        ->paginate(15);
+$test = Test::select('id', 'name')->where([['id', 1], ['status', 'completed']])
+      ->with(['questions.answers:id,question_id,answer', 'questions:file:id,path'])
+      ->with('questions:id,test_id,question')
+      ->firstOrFail();
 
-$q = Test::select('*')
-  ->with('questions')
-  ->orderBy('id', 'asc')
-  ->limit(1)
-  ->paginate(15);
+dd(File::select('id', 'name')->get());
 
-//dd($q);
-
-foreach ($q as $qq){
-  echo $qq->name . "<br>";
-  //echo $qq->questions. "<br>";
-
-  foreach ($qq->questions as $ver){
-    echo $ver->id . "<br>";
-  }
-}
 @endphp

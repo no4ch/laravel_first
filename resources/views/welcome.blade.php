@@ -81,15 +81,13 @@
 
   <div class="content">
     <div class="title m-b-md">
-      Buy an elephant !
+      Take the test !
     </div>
 
     <div class="links">
 
       <a href="/tests">Go to tests</a>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/about">About us</a>
-      <a href="/about/app/home">App</a>
+      <a href="/about/app/home">About us</a>
       {{--      <a href="/product/grechka">2) getParameters</a>--}}
     </div>
   </div>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-  protected $fillable = ['test_id', 'question'];
+  protected $fillable = ['test_id', 'file_id', 'question'];
 
 
   public function test()
@@ -17,5 +17,10 @@ class Question extends Model
 
   public function answers(){
     return $this->hasMany(Answer::class);
+  }
+
+  public function file()
+  {
+    return $this->belongsTo(File::class);
   }
 }

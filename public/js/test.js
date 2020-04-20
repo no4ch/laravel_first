@@ -128,6 +128,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['test'],
   name: "Test",
@@ -170,6 +174,7 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (response) {
           t.checkResults(response.data);
         })["catch"](function (error) {
+          //запилить ошибки
           console.log(error);
         });
       }
@@ -206,7 +211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.test[data-v-53784a98] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n", ""]);
+exports.push([module.i, "\n.test[data-v-53784a98] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.question-image > img[data-v-53784a98]{\n  max-height: 250px;\n  max-width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -1335,13 +1340,27 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("br"),
-      _c("br"),
       _vm._v(" "),
       _vm.questionsCount > 0 && _vm.testing
         ? _c(
             "div",
             { staticClass: "container mb-3" },
             [
+              _vm.test.questions[_vm.counter].file
+                ? _c("div", { staticClass: "question-image" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "/storage/" +
+                          _vm.test.questions[_vm.counter].file.path,
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("hr")
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
               _c("p", [
                 _vm._v(_vm._s(_vm.counter + 1) + ") Question: "),
                 _c("strong", [
