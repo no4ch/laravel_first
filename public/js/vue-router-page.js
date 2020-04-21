@@ -2059,19 +2059,25 @@ var staticRenderFns = [
         _c("div", { staticClass: "container" }, [
           _c("h2", [_vm._v("1) Go to the test page")]),
           _vm._v(" "),
-          _c("p", [_vm._v("img")]),
+          _c("img", {
+            attrs: { src: "/storage/about-images/a1.png", alt: "" }
+          }),
           _vm._v(" "),
           _c("h2", [_vm._v("2) Choose a test")]),
           _vm._v(" "),
-          _c("p", [_vm._v("img")]),
+          _c("img", {
+            attrs: { src: "/storage/about-images/a2.png", alt: "" }
+          }),
           _vm._v(" "),
           _c("h2", [_vm._v("3) Take the test")]),
           _vm._v(" "),
-          _c("p", [_vm._v("img")]),
+          _c("img", {
+            attrs: { src: "/storage/about-images/a3.png", alt: "" }
+          }),
           _vm._v(" "),
           _c("h2", [_vm._v("4) View your result")]),
           _vm._v(" "),
-          _c("p", [_vm._v("img")])
+          _c("img", { attrs: { src: "/storage/about-images/a4.png", alt: "" } })
         ])
       ])
     ])

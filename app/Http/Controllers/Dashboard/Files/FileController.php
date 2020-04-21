@@ -25,19 +25,7 @@ class FileController extends Controller
 
   public function store(StoreRequest $request)
   {
-    //dd($request->all());
-
-    if ($request->hasFile('image')) {
-      $file = $request->file('image');
-      $data = [];
-      $data['name'] = $file->getClientOriginalName();
-      $data['path'] = $file->store('images', 'public');
-      $data['mime_type'] = $file->getMimeType();
-      $data['size'] = $file->getSize();
-
-      File::create($data);
-      session()->flash('success', "File added successfully in database");
-    }
+    (new File)->storeFile($request);
 
     $files = File::paginate(5);
 
@@ -57,7 +45,6 @@ class FileController extends Controller
   public function update(UpdateRequest $request, File $file)
   {
     $data = $request->only(['name']);
-    //dd($data);
     $file->update($data);
     session()->flash('success', "Image #$file->id successfully changed");
 

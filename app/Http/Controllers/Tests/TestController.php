@@ -10,7 +10,7 @@ class TestController extends Controller
 {
   public function index()
   {
-    $tests = Test::getTests()->paginate(5);
+    $tests = Test::getTests()->paginate(7);
 
     return view('tests.index', compact('tests'));
   }
@@ -22,8 +22,7 @@ class TestController extends Controller
       ->with('questions.file:id,path')
       ->with('questions:id,test_id,file_id,question')
       ->firstOrFail();
-    //заделать scopeGetTest
-    //    dd($test);
+
     return view('tests.show', compact('test'));
   }
 }

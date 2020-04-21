@@ -74,6 +74,7 @@ Route::name('dashboard.')
 
 Auth::routes();
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider')->name('login.facebook');
+Route::get('user/facebook', 'Auth\LoginController@handleProviderCallback');
 
 /**
  * Routes for Spa

@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static create(array $data)
+ * @method static getTestsForDashboard()
  */
 class Test extends Model
 {
@@ -84,5 +85,17 @@ class Test extends Model
 
     //[$result, "Итерации $i"]
     return response()->json($result, 200);
+  }
+
+  /**
+   * @return mixed
+   */
+
+  public function scopeGetTestsForDashboard()
+  {
+    return Test::select('id', 'name', 'updated_at', 'status')
+      ->with('questions.answers:id,question_id,answer,status,updated_at')
+      ->with('questions:id,test_id,question,updated_at')
+      ->orderBy('id', 'desc');
   }
 }
