@@ -16,7 +16,7 @@
      * @var array
      */
     protected $fillable = [
-      'name', 'email', 'password',
+      'name', 'email', 'password', 'group_id', 'role'
     ];
 
     /**
@@ -46,4 +46,6 @@
     {
       return User::select('name', 'email')->where('id', $id)->first();
     }
+
+
   }

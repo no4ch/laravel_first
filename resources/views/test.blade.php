@@ -1,16 +1,13 @@
-@php
-
-use App\Models\File;
-use App\Models\Question;
-use App\Models\Test;
-
-$data = Question::select('*')->with('file:id,path')->get();
-
-$test = Test::select('id', 'name')->where([['id', 1], ['status', 'completed']])
-      ->with(['questions.answers:id,question_id,answer', 'questions:file:id,path'])
-      ->with('questions:id,test_id,question')
-      ->firstOrFail();
-
-dd(File::select('id', 'name')->get());
-
-@endphp
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>У Алины все работает</h1>
+</body>
+</html>

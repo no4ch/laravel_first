@@ -17,6 +17,9 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/home', 'Users\UserController@home')->middleware(['auth']);
+Route::post('/home', 'Users\UserController@saveGroup')->middleware(['auth', 'roles:admin|user']);
+
 /**
  * Routes for tests
  */
@@ -31,6 +34,9 @@ Route::name('tests.')
     Route::get('{id}', 'TestController@show')
       ->middleware('auth');
   });
+
+Route::get('/profile', 'Users\UserController@index')->middleware('auth')->name('profile');
+Route::patch('/profile', 'Users\UserController@update')->middleware('auth')->name('profile');
 
 /**
  * Routes for Dashboard
@@ -65,11 +71,14 @@ Route::name('dashboard.')
         Route::resource('files', 'FileController');
       });
 
+      Route::namespace('Groups')
+          ->group(function (){
+              Route::resource('groups', 'GroupController');
+          });
+
     Route::resource('tests.questions', 'Questions\QuestionController');
     Route::resource('questions.answers', 'Answers\AnswerController');
 
-//    Route::get('files', 'Files\FileController@index')->name('files.index');
-//    Route::post('files/upload', 'Files\FileController@upload')->name('files.upload');
   });
 
 Auth::routes();
@@ -84,6 +93,24 @@ Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::post('/api/results', 'Api\ResultsController@checkResults');
 
-//Route::get('test', function (){
-//  return view('test');
-//});
+Route::get('test', function (){
+  return view('test');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

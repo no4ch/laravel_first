@@ -27,6 +27,12 @@
               Check files
             </a>
           </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('dashboard.groups.index') }}">
+                    <span data-feather="file-text"></span>
+                    Groups
+                </a>
+            </li>
         </ul>
   </div>
 </nav>

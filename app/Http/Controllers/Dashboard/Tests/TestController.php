@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Test\StoreRequest;
 use App\Http\Requests\Test\UpdateRequest;
 use App\Models\Test;
+use App\Repositories\TestRepository;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,82 +16,90 @@ use Illuminate\View\View;
 
 class TestController extends Controller
 {
-  /**
-   * Получение списка тестов
-   *
-   * @return RedirectResponse
-   */
-  public function index()
-  {
-    //$tests = Test::select('*')->orderBy('id', 'desc')->paginate(10);
+    private $testRepository;
 
-    return redirect()->route('dashboard.');
-    //return view('dashboard.tests.index', compact('tests'));
-  }
+    public function __construct(TestRepository $testRepository)
+    {
+        $this->testRepository = $testRepository;
+    }
+    /**
+     * Получение списка тестов
+     *
+     * @return RedirectResponse
+     */
+    public function index()
+    {
+        //$tests = Test::select('*')->orderBy('id', 'desc')->paginate(10);
 
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return View
-   */
-  public function create()
-  {
-    return view('dashboard.tests.create');
-  }
+        return redirect()->route('dashboard.');
+        //return view('dashboard.tests.index', compact('tests'));
+    }
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @param  StoreRequest  $request
-   * @return RedirectResponse
-   */
-  public function store(StoreRequest $request)
-  {
-    $data = $request->only(['name', 'description', 'status']);
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return View
+     */
+    public function create()
+    {
+        return view('dashboard.tests.create');
+    }
 
-    Test::create($data);
-    session()->flash('success', 'Test added successfully');
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  StoreRequest  $request
+     * @return RedirectResponse
+     */
+    public function store(StoreRequest $request)
+    {
+        $data = $request->only(['name', 'status']);
 
-    return redirect()->route('dashboard.tests.index');
-  }
+        Test::create($data);
+        session()->flash('success', 'Test added successfully');
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function show($id)
-  {
-    //
-  }
+        return redirect()->route('dashboard.tests.index');
+    }
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  Test  $test
-   * @return View
-   */
-  public function edit(Test $test)
-  {
-    return view('dashboard.tests.edit', compact('test'));
-  }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return View
+     */
+    public function show(int $id)
+    {
+        $test = $this->testRepository->getTestForDashboard($id);
 
-  public function update(UpdateRequest $request, Test $test)
-  {
-    $data = $request->only(['name', 'description', 'status']);
+        return view('dashboard.tests.show', compact('test'));
+    }
 
-    $test->update($data);
-    session()->flash('success', "Test #$test->id updated successfully");
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  Test  $test
+     * @return View
+     */
+    public function edit(Test $test)
+    {
+        return view('dashboard.tests.edit', compact('test'));
+    }
 
-    return redirect()->route('dashboard.');
-  }
+    public function update(UpdateRequest $request, Test $test)
+    {
+        $data = $request->only(['name', 'description', 'status']);
 
-  public function destroy(Test $test)
-  {
-    $test->delete();
-    session()->flash('success', 'Test was deleted successfully');
+        $test->update($data);
+        session()->flash('success', "Test #$test->id updated successfully");
 
-    return redirect()->route('dashboard.');
-  }
+        return redirect()->route('dashboard.');
+    }
+
+    public function destroy(Test $test)
+    {
+        $test->delete();
+        session()->flash('success', 'Test was deleted successfully');
+
+        return redirect()->route('dashboard.');
+    }
 }
