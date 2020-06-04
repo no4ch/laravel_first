@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X0582ebd501615ddf643ee205815a7a17.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X0cada67bb6d6319990154f5fd2629e6f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X164aa61e8f46045322c494861497b638.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X165b1f802c93b6e1dfde239729842c77.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X2a88b277e77834f83294d7419ea21c31.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X360879fa989bd0c9ed398aa72f44cb65.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X39df8fbeae5a58bb9808a8745969f250.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X48e09273cb23e1fd2e7a6d40e2cd1a0f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X5db03428b1fd865d3f683fd803b179cf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X5e1f30ebad6dd6f62503f82b2ee50aa5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X603dc596418d99ecf5ad92f76972cf45.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X615ed491cb1cacb241c5d5f15b1f81d8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X61733a0e30b1798a1bee130d9634df91.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X61977547d658b88b45b0363a9266fc0b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X89bee841885668ed6394db01a7c643b1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X9044f720f71c62dbb0ec098d97ae48e9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X96b2efcce541f62fba1fbc7dccfbdc3a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/X9b290b9bc3fb4592ab134b154c635ab2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xa3d515638367ca81591f5df6209bac8b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xa89312ee5f04e6a44d145150eba903d7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xb3461ddb966e7be45ef3923df63f29ca.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xbcb4dcc179e47a52590a6f5b48d9b61d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xd39c8bfae5d5aff3513a5e5554a69ca7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xdcab553b26f81d4792bbbcc67e8a47c3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xe35492a31780d35ebb5d6b8e70494f56.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xe6199c734ed4861e0b718f71abad9304.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xe7af89b24c712b4d564f001cb6ffd811.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xf54b7891d7b1501c581251ceef9dde0b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xfcc11fefd45c7636559840b252934b2b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +288,7 @@
       <workItem from="1591029725424" duration="4449000" />
       <workItem from="1591092672139" duration="16035000" />
       <workItem from="1591175151468" duration="8142000" />
-      <workItem from="1591274455690" duration="49000" />
+      <workItem from="1591274455690" duration="490000" />
     </task>
     <task id="LOCAL-00001" summary="complete question block">
       <created>1586555800131</created>
