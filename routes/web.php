@@ -25,6 +25,9 @@ Route::post('/home', 'HomeController@saveGroup')->middleware(['auth', 'roles:adm
  */
 
 Route::name('tests.')
+    ->middleware([
+        'auth', 'roles:student'
+    ])
     ->namespace('Tests')
     ->prefix('tests')
     ->group(function () {
