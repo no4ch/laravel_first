@@ -32,7 +32,7 @@ Route::name('tests.')
     ->prefix('tests')
     ->group(function () {
 
-        Route::get('/', 'TestController@index');
+        Route::get('/', 'TestController@index')->name('tests-list');
 
         Route::get('{id}', 'TestController@show')->middleware('auth');
     });

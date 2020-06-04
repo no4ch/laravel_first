@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +290,7 @@
       <workItem from="1591029725424" duration="4449000" />
       <workItem from="1591092672139" duration="16035000" />
       <workItem from="1591175151468" duration="8142000" />
-      <workItem from="1591274455690" duration="551000" />
+      <workItem from="1591274455690" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="complete question block">
       <created>1586555800131</created>

@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('tests.index') }}">Tests <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('tests.tests-list') }}">Tests <span class="sr-only">(current)</span></a>
             </li>
 {{--            <li class="nav-item dropdown">--}}
 {{--                <a class="nav-link" href="/about/app/home">About us<span class="sr-only">(current)</span></a>--}}
