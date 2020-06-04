@@ -22,7 +22,7 @@
         {!! Form::open(['url' => route('dashboard.groups.store')]) !!}
         @include('dashboard.groups.blocks.form.fields')
         <div class="form-group">
-            {!! Form::submit('Update', ['class' => 'btn btn-success']); !!}
+            {!! Form::submit('Create', ['class' => 'btn btn-success']); !!}
         </div>
         {!! Form::close() !!}
     </div>

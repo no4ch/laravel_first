@@ -73,9 +73,9 @@
                         t.possibleAnswer = "";
                     }
 
-                    let answers = JSON.stringify(t.answers);
+                    //let answers = JSON.stringify(t.answers);
                     axios.post('/api/results', {
-                        answers,
+                        answers: this.answers,
                         id: t.test.id
                     })
                     .then(response => {

@@ -10,9 +10,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/tests">Tests <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="/about/app/home">About us<span class="sr-only">(current)</span></a>
-            </li>
+{{--            <li class="nav-item dropdown">--}}
+{{--                <a class="nav-link" href="/about/app/home">About us<span class="sr-only">(current)</span></a>--}}
+{{--            </li>--}}
             @if(auth()->user() && auth()->user()->role == 'admin')
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="{{ route('dashboard.') }}">Dashboard<span class="sr-only">(current)</span></a>
@@ -21,6 +21,11 @@
             @if(auth()->user())
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="{{ route('profile') }}">Profile<span class="sr-only">(current)</span></a>
+                </li>
+            @endif
+            @if(auth()->user())
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{ route('results') }}">Results<span class="sr-only">(current)</span></a>
                 </li>
             @endif
         </ul>

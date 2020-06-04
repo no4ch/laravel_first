@@ -12,13 +12,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    private $groupRepository;
-
-    public function __construct(GroupRepository $groupRepository)
-    {
-        $this->groupRepository = $groupRepository;
-    }
-
     public function index()
     {
         //dd(Auth::user());
@@ -49,27 +42,4 @@ class UserController extends Controller
         return redirect()->route('profile');
     }
 
-    public function home()
-    {
-        if (auth()->user()->role !== 'student') {
-        $groups = $this->groupRepository->getGroups();
-
-        return view('home', compact('groups'));
-        }
-        else return redirect('/tests');
-    }
-
-    public function saveGroup(Request $request)
-    {
-        $user = Auth::user();
-        $data = $request->only(['group_id']);
-
-        if ($user->role === 'user') {
-            $data['role'] = 'student';
-        }
-
-        $user->update($data);
-
-        return redirect('/tests');
-    }
 }

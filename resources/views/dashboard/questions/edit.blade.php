@@ -18,7 +18,7 @@
       <a class="btn btn-primary btn-lg" href="{{ route('dashboard.') }}" role="button">Back</a>
     </div>
 
-    {!! Form::open(['method' => 'patch' ,'url' => route('dashboard.questions.update', $question->id)]) !!}
+    {!! Form::open(['method' => 'patch' ,'url' => route('dashboard.questions.update', $question->id), 'files' => true]) !!}
     @include('dashboard.questions.blocks.form.fields')
     <div class="form-group">
       {!! Form::submit('Update', ['class' => 'btn btn-success']); !!}

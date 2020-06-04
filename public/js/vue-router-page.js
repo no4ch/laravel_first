@@ -226,6 +226,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['test'],
   name: "Test",
@@ -259,11 +260,11 @@ __webpack_require__.r(__webpack_exports__);
         if (t.counter < t.questionsCount) {
           t.answers.push(t.possibleAnswer);
           t.possibleAnswer = "";
-        }
+        } //let answers = JSON.stringify(t.answers);
 
-        var answers = JSON.stringify(t.answers);
+
         axios.post('/api/results', {
-          answers: answers,
+          answers: this.answers,
           id: t.test.id
         }).then(function (response) {
           t.checkResults(response.data);
@@ -431,7 +432,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.test[data-v-53784a98] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.question-image > img[data-v-53784a98]{\n  max-height: 250px;\n  max-width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test[data-v-53784a98] {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n.question-image > img[data-v-53784a98] {\n    max-height: 250px;\n    max-width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -1860,12 +1861,12 @@ var render = function() {
                             }
                           }),
                           _vm._v(
-                            "\n          " +
+                            "\n                    " +
                               _vm._s(
                                 _vm.test.questions[_vm.counter].answers[index]
                                   .answer
                               ) +
-                              "\n        "
+                              "\n                "
                           )
                         ]
                       )

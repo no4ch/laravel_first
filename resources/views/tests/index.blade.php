@@ -12,7 +12,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
-        <th scope="col">Questions</th>
+{{--        <th scope="col">Questions</th>--}}
       </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@
           <td>
             <a href="{{ route('tests.', $test->id) }}">{{ $test->name }}</a>
           </td>
-          <td>{{ $test->questions_count }}</td>
+{{--          <td>{{ $test->questions_count }}</td>--}}
         </tr>
       @empty
         <h2>Тесты не были загружены</h2>
@@ -30,6 +30,6 @@
       </tbody>
     </table>
     <hr>
-    {{ $tests->links() }}
+{{--    {{ $tests->links() }}--}}
   </div> <!-- /container -->
 @endsection

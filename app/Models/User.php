@@ -1,13 +1,13 @@
 <?php
 
-  namespace App\Models;
+namespace App\Models;
 
-  use Illuminate\Contracts\Auth\MustVerifyEmail;
-  use Illuminate\Foundation\Auth\User as Authenticatable;
-  use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-  class User extends Authenticatable
-  {
+class User extends Authenticatable
+{
     use Notifiable;
 
     /**
@@ -16,7 +16,7 @@
      * @var array
      */
     protected $fillable = [
-      'name', 'email', 'password', 'group_id', 'role'
+        'name', 'email', 'password', 'group_id', 'role'
     ];
 
     /**
@@ -25,7 +25,7 @@
      * @var array
      */
     protected $hidden = [
-      'password', 'remember_token',
+        'password', 'remember_token',
     ];
 
     /**
@@ -34,18 +34,31 @@
      * @var array
      */
     protected $casts = [
-      'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime',
     ];
 
     public function getUsers()
     {
-      return User::select('name', 'email')->get();
+        return User::select('name', 'email')->get();
     }
 
     public function getUser($id)
     {
-      return User::select('name', 'email')->where('id', $id)->first();
+        return User::select('name', 'email')->where('id', $id)->first();
     }
 
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 
-  }
+    public function results()
+    {
+        return $this->hasMany(Result::class);
+    }
+
+    public function tests()
+    {
+        return $this->belongsToMany(Test::class, 'results');
+    }
+}

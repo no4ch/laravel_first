@@ -13,8 +13,6 @@
 
   <h1>Files page</h1>
 
-  <a href="{{ route('dashboard.files.create') }}" class="btn btn-primary">Add new image</a>
-
   <hr>
 
   <table class="table table-striped">
@@ -38,11 +36,6 @@
         <td>{{ $file->updated_at }}</td>
         <td>
           <a href="{{ route('dashboard.files.edit', $file->id) }}" class="badge badge-primary pl-2 pr-2 pt-1 pb-1">Edit</a>
-          <form id="destroy-form" action="{{ route('dashboard.files.destroy', $file->id) }}" method="POST">
-            @csrf
-            @method('delete')
-            <button class="badge badge-danger pl-2 pr-2 pt-1 pb-1" type="submit">Delete</button>
-          </form>
         </td>
       </tr>
     @empty

@@ -112,7 +112,6 @@ class GroupController extends Controller
     public function destroy(Group $group)
     {
         $group->delete();
-
         session()->flash('success', 'Group was deleted successfully');
 
         return redirect()->route('dashboard.groups.index');

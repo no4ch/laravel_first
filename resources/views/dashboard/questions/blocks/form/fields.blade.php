@@ -11,12 +11,10 @@
     @enderror
 
     <div class="form-group">
-      {!! Form::label('file_id', "File id") !!}
-      {!! Form::number('file_id', $question->file_id ?? null, ['class' => 'form-control']) !!}
-
+        {!! Form::file('image') !!}
     </div>
 
-    @error('file_id')
+    @error('image')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
 
