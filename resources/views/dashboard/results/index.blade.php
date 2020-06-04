@@ -42,7 +42,7 @@
                                 <tbody>
                                 @forelse($user->tests as $test)
                                     @forelse($test->results as $result)
-                                        @if($result->user_id === $user->id && $result->test_id === $test->id)
+                                        @if(($result->user_id == $user->id) && ($result->test_id == $test->id))
                                         <tr>
                                             <td scope="row">{{ $result->id }}</td>
                                             <td scope="row">{{ $test->name }}</td>

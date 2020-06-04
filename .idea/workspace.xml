@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="" />
+    <list default="true" id="aa9a333d-cbcd-4f48-9724-315d82490c66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X168ed4ffdcb0172a661d91e1b7c884a4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X33eeef6413547bc1cade1465547f5719.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/X4d2d0693848f4760179631df81cc5a20.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xa653ca37c913c3c096044e7d0791bcbc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xb18bc2f4141e95d9d6c72bc0ca332478.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xb2c9a3e76b0b62d7e27e24c52805dc75.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/Xbfbdc0a34cebf2ceb7414c8ec2be4cab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/results/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/results/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +296,7 @@
       <workItem from="1591029725424" duration="4449000" />
       <workItem from="1591092672139" duration="16035000" />
       <workItem from="1591175151468" duration="8142000" />
-      <workItem from="1591274455690" duration="1277000" />
+      <workItem from="1591274455690" duration="3117000" />
     </task>
     <task id="LOCAL-00001" summary="complete question block">
       <created>1586555800131</created>
