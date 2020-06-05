@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Dashboard\Tests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Test\StoreRequest;
 use App\Http\Requests\Test\UpdateRequest;
+use App\Models\File;
+use App\Models\Question;
 use App\Models\Test;
 use App\Repositories\TestRepository;
 use Illuminate\Contracts\View\Factory;
@@ -12,6 +14,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use Storage;
 
 
 class TestController extends Controller
@@ -97,8 +100,17 @@ class TestController extends Controller
 
     public function destroy(Test $test)
     {
+        $filesId = Question::where('test_id', $test->id)->pluck('file_id');
+
         $test->delete();
         session()->flash('success', 'Test was deleted successfully');
+        $files = File::whereIn('id', $filesId)->get();
+
+        foreach ($files as $file) {
+            Storage::delete('/public/'.$file->path);
+        }
+
+        File::destroy($filesId);
 
         return redirect()->route('dashboard.');
     }
