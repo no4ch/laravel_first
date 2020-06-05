@@ -85,7 +85,7 @@
         </div>
 
         <div class="links">
-            <a href="{{ url('/home') }}">Go to tests</a>
+            <a href="{{ url('/home') }}">Перейти до тестів</a>
             {{--      <a href="/about/app/home">About us</a>--}}
         </div>
     </div>
