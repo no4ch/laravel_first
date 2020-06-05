@@ -1,7 +1,7 @@
 {{--@extends('layouts.app')--}}
 @extends('layouts.default')
 
-@section('title', 'Confirm')
+@section('title', 'Підтвердження')
 
 @section('content')
 <div class="container">

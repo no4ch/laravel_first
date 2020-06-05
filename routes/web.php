@@ -40,7 +40,9 @@ Route::name('tests.')
 Route::get('/profile', 'Users\UserController@index')->middleware('auth')->name('profile');
 Route::patch('/profile', 'Users\UserController@update')->middleware('auth')->name('profile');
 
-Route::get('/results', 'Users\Results\ResultController@index')->name('results');
+Route::get('/results', 'Users\Results\ResultController@index')
+    ->name('results')
+    ->middleware(['auth', 'roles:admin|student']);
 
 /**
  * Routes for Dashboard
@@ -99,13 +101,14 @@ Route::get('user/facebook', 'Auth\LoginController@handleProviderCallback');
  * Routes for Spa
  */
 
-Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
+//Route::get('/about/{any}', 'SpaController@index')->where('any', '.*');
 
-Route::post('/api/results', 'Api\ResultsController@checkResults');
+Route::post('/api/results', 'Api\ResultsController@checkResults')
+    ->middleware(['auth']);
 
-Route::get('test', function () {
-    return view('test');
-});
+//Route::get('test', function () {
+//    return view('test');
+//});
 
 
 

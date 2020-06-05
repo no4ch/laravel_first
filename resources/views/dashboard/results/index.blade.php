@@ -1,17 +1,17 @@
 @extends('dashboard.layouts.default')
 
-@section('title', 'Results')
+@section('title', 'Результати')
 
 @section('dashboard-content')
     @parent
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Results</li>
+            <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Адмінка</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Результати</li>
         </ol>
     </nav>
 
-    <h1>Results</h1>
+    <h1>Результати</h1>
     <hr>
 
     @forelse($groups as $group)
@@ -32,11 +32,11 @@
                                 <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Answers</th>
-                                    <th scope="col">Right answers</th>
-                                    <th scope="col">% correct answers</th>
-                                    <th scope="col">Created at</th>
+                                    <th scope="col">Ім'я</th>
+                                    <th scope="col">Відповідей</th>
+                                    <th scope="col">Вірні відповіді</th>
+                                    <th scope="col">% правильних відповідей</th>
+                                    <th scope="col">Пройдений</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -50,7 +50,7 @@
                                             <td>{{ $result->right_answers }}</td>
                                             <td>{{ $result->percent }} %</td>
                                             <td>
-                                                {{ $result->created_at ? $result->created_at->diffForHumans() : 'date empty' }}
+                                                {{ $result->created_at ? $result->created_at->diffForHumans() : 'дата не вказана' }}
 {{--                                                {{ @date_format($result->created_at, 'G:H:s m-d-y') }}--}}
                                             </td>
                                         </tr>
@@ -66,12 +66,12 @@
                 @endif
             </div>
         @empty
-            <p>Users of this group have not yet passed the test</p>
+            <p>Користувачі в цій группі відсутні</p>
         @endforelse
 
         <hr>
     @empty
-        <h2>Empty access</h2>
+        <h2>Пусті результати</h2>
     @endforelse
 
 @endsection

@@ -16,6 +16,15 @@ class CheckResultsRequest extends FormRequest
         return true;
     }
 
+    public function attributes()
+    {
+        return [
+            'id' => 'тест',
+            'answers' => 'відповіді',
+            'answers.*' => 'відповіді',
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *

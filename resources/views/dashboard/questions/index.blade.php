@@ -1,29 +1,29 @@
 @extends('dashboard.layouts.default')
 
-@section('title', 'Questions')
+@section('title', 'Питання')
 
 @section('dashboard-content')
 
   <div class="">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Dashboard</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Questions</li>
+        <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Адмінка</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Питання</li>
       </ol>
     </nav>
 
     <div class="jumbotron">
-      <h1 class="display-4">Questions</h1>
+      <h1 class="display-4">Питання</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
                       featured content or information.</p>
-      <a class="btn btn-primary btn-lg" href="{{ route('dashboard.questions.create') }}" role="button">Add Question</a>
+      <a class="btn btn-primary btn-lg" href="{{ route('dashboard.questions.create') }}" role="button">Додати питання</a>
     </div>
 
     <table class="table table-striped">
       <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Test name</th>
+        <th scope="col">Ім'я тесту</th>
         <th scope="col">Descr</th>
         <th scope="col">Created at</th>
         <th></th>

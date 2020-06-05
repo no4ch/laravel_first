@@ -11,7 +11,7 @@
       <thead class="thead-light">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col">Ім'я</th>
 {{--        <th scope="col">Questions</th>--}}
       </tr>
       </thead>
@@ -25,7 +25,7 @@
 {{--          <td>{{ $test->questions_count }}</td>--}}
         </tr>
       @empty
-        <h2>Тесты не были загружены</h2>
+        <h2>Тести для вашої групи відстні</h2>
       @endforelse
       </tbody>
     </table>

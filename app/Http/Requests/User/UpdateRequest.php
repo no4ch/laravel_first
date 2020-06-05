@@ -19,6 +19,13 @@ class UpdateRequest extends FormRequest
         return true;
     }
 
+    public function attributes()
+    {
+        return [
+            'old-password' => 'старий пароль',
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -41,11 +48,11 @@ class UpdateRequest extends FormRequest
                 'nullable', 'string', 'max:255', 'min:8',
             ],
 
-            'new-password' => [
+            'password' => [
                 'nullable', 'string', 'max:255', 'min:8', 'same:confirm-new-password', 'different:old-password'
             ],
 
-            'confirm-new-password' => [
+            'password_confirmation' => [
                 'nullable', 'string', 'max:255', 'min:8', 'same:new-password'
             ],
         ];

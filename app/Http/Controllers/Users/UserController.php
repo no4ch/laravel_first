@@ -25,11 +25,11 @@ class UserController extends Controller
         $user = Auth::user();
 
         $data = $request->only(['name', 'email']);
-        if (!empty($request['new-password']) && !empty($request['old-password'])) {
+        if (!empty($request['password']) && !empty($request['old-password'])) {
             //if no empty
             if (Hash::check($request['old-password'], $user->getAuthPassword())) {
                 //if wrong old password
-                $data['password'] = Hash::make($request['new-password']);
+                $data['password'] = Hash::make($request['password']);
             } else {
                 session()->flash('danger', "The user was not updated because the old password was entered incorrectly");
                 return redirect()->route('profile');

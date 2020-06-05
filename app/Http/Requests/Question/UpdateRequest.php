@@ -16,6 +16,13 @@ class UpdateRequest extends FormRequest
         return true;
     }
 
+    public function attributes()
+    {
+        return [
+            'question' => 'Питання',
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,8 +31,8 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-          'question' => ['required', 'string', 'max:255'],
-          'file_id' => ['nullable', 'numeric']
+            'question' => ['required', 'string', 'max:255'],
+            'image' => 'nullable|image|max:2056',
         ];
     }
 }

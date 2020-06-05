@@ -1,17 +1,17 @@
 @extends('dashboard.layouts.default')
 
-@section('title', 'Files')
+@section('title', 'Файли')
 
 @section('dashboard-content')
   @parent
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Files</li>
+      <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Адмінка</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Файли</li>
     </ol>
   </nav>
 
-  <h1>Files page</h1>
+  <h1>Сторінка файлів</h1>
 
   <hr>
 
@@ -19,11 +19,11 @@
     <thead>
     <tr>
       <th>#</th>
-      <th>Name</th>
-      <th>Size</th>
-      <th>Mime Type</th>
-      <th>Updated_at</th>
-      <th>Actions</th>
+      <th>Ім'я</th>
+      <th>Розмір</th>
+      <th>Тип</th>
+      <th>Обновлений в</th>
+      <th>Дії</th>
     </tr>
     </thead>
     <tbody>
@@ -35,12 +35,12 @@
         <td>{{ $file->mime_type }}</td>
         <td>{{ $file->updated_at }}</td>
         <td>
-          <a href="{{ route('dashboard.files.edit', $file->id) }}" class="badge badge-primary pl-2 pr-2 pt-1 pb-1">Edit</a>
+          <a href="{{ route('dashboard.files.edit', $file->id) }}" class="badge badge-primary pl-2 pr-2 pt-1 pb-1">Редагувати</a>
         </td>
       </tr>
     @empty
       <div class="alert-danger">
-        No files in database
+        Файли відстні в базі
       </div>
     @endforelse
     </tbody>

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-12 col-md-6">
     <div class="form-group">
-      {!! Form::label('answer', 'Answer') !!}
+      {!! Form::label('answer', 'Відповідь') !!}
       {!! Form::text('answer', $answer->answer ?? null, ['class' => 'form-control']) !!}
     </div>
 
@@ -10,8 +10,8 @@
     @enderror
 
     <div class="form-group">
-      {!! Form::label('status', 'Status') !!}
-      {!! Form::select('status', ['true' => 'True', 'false' => 'False'], $answer->status ?? 'false', ['class' => 'custom-select']) !!}
+      {!! Form::label('status', 'Відповідь:') !!}
+      {!! Form::select('status', ['true' => 'Вірна', 'false' => 'Невірна'], $answer->status ?? 'false', ['class' => 'custom-select']) !!}
     </div>
 
     @error('status')

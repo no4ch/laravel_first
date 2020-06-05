@@ -17,6 +17,14 @@ class UpdateRequest extends FormRequest
     return true;
   }
 
+    public function attributes()
+    {
+        return [
+            'answer' => 'Відповідь',
+            'status' => 'Статус',
+        ];
+    }
+
   /**
    * Get the validation rules that apply to the request.
    *

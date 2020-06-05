@@ -16,6 +16,13 @@ class StoreRequest extends FormRequest
         return true;
     }
 
+    public function attributes()
+    {
+        return [
+            'question' => 'Питання',
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -25,7 +32,6 @@ class StoreRequest extends FormRequest
     {
         return [
             'question' => ['required', 'string', 'max:255'],
-            'file_id' => ['nullable', 'numeric'],
             'image' => 'nullable|image|max:2056'
         ];
     }

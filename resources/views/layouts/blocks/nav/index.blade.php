@@ -1,31 +1,27 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Home page</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <span class="navbar-brand">Система тестування</span>
+
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('tests.tests-list') }}">Tests <span class="sr-only">(current)</span></a>
-            </li>
-{{--            <li class="nav-item dropdown">--}}
-{{--                <a class="nav-link" href="/about/app/home">About us<span class="sr-only">(current)</span></a>--}}
-{{--            </li>--}}
+            @if(auth()->user())
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('tests.tests-list') }}">Тести <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('profile') }}">Профіль<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('results') }}">Результати<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            @endif
+
             @if(auth()->user() && auth()->user()->role == 'admin')
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('dashboard.') }}">Dashboard<span class="sr-only">(current)</span></a>
-                </li>
-            @endif
-            @if(auth()->user())
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('profile') }}">Profile<span class="sr-only">(current)</span></a>
-                </li>
-            @endif
-            @if(auth()->user())
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('results') }}">Results<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard.') }}">Адмінка<span
+                            class="sr-only">(current)</span></a>
                 </li>
             @endif
         </ul>
@@ -33,11 +29,11 @@
             <!-- Authentication Links -->
             @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Вхід') }}</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Реєстрація') }}</a>
                     </li>
                 @endif
             @else
@@ -52,7 +48,8 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{--                            {{ __('Logout') }}--}}
+                            Вихід
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -2,7 +2,7 @@
   <div class="col-sm-12 col-md-6">
 
     <div class="form-group">
-      {!! Form::label('question', 'Question') !!}
+      {!! Form::label('question', 'Питання') !!}
       {!! Form::text('question', $question->question ?? null, ['class' => 'form-control']) !!}
     </div>
 
@@ -11,7 +11,9 @@
     @enderror
 
     <div class="form-group">
-        {!! Form::file('image') !!}
+        {!! Form::label('image', 'Зображення') !!}
+        <br>
+        {!! Form::file('image', ['accept' => 'image/*']) !!}
     </div>
 
     @error('image')

@@ -16,6 +16,14 @@ class StoreRequest extends FormRequest
         return true;
     }
 
+    public function attributes()
+    {
+        return [
+            'group_id' => 'групи',
+            'test_id' => 'тесту',
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,8 +32,8 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'group_id' => ['required', 'min:1', 'integer', 'exists:groups,id',],
-            'test_id' => ['required', 'min:1', 'integer', 'exists:tests,id',],
+            'group_id' => ['required', 'integer', 'exists:groups,id', 'min:1',],
+            'test_id' => ['required', 'integer', 'exists:tests,id', 'min:1',],
         ];
     }
 }

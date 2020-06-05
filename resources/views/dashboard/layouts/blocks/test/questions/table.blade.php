@@ -2,9 +2,9 @@
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">Questions</th>
-        <th scope="col">Updated at</th>
-        <th scope="col">Actions</th>
+        <th scope="col">Питання</th>
+        <th scope="col">Обновлене в</th>
+        <th scope="col">Дії</th>
         <th></th>
     </tr>
     </thead>
@@ -16,18 +16,18 @@
             <td>{{ $question->updated_at }}</td>
             <td>
                 <a class="badge badge-primary pl-2 pr-2 pt-1 pb-1"
-                   href="{{ route('dashboard.questions.edit', $question->id) }}">Edit</a>
+                   href="{{ route('dashboard.questions.edit', $question->id) }}">Редагувати</a>
                 <form id="destroy-form" action="{{ route('dashboard.questions.destroy', $question->id) }}"
                       method="POST">
                     @csrf
                     @method('delete')
-                    <button class="badge badge-danger pl-2 pr-2 pt-1 pb-1" type="submit">Delete</button>
+                    <button class="badge badge-danger pl-2 pr-2 pt-1 pb-1" type="submit">Видалити</button>
                 </form>
             </td>
             <td>
                 <a class="" data-toggle="collapse" href="#collapseQuestion{{ $loop->index }}" role="button"
                    aria-expanded="false" aria-controls="collapseQuestion{{ $loop->index }}">
-                    Show answers
+                    Показати відповіді
                 </a>
             </td>
         </tr>
@@ -41,15 +41,15 @@
                             <br>
                             @endif
                             <a class="btn btn-primary btn-lg mt-2" href="{{ route("dashboard.questions.answers.create", $question->id) }}"
-                               role="button">Add answer</a>
+                               role="button">Додати відповідь</a>
                         </div>
                         <table class="table table-striped">
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Answers</th>
-                                <th scope="col">Updated at</th>
-                                <th>Actions</th>
+                                <th scope="col">Відповіді</th>
+                                <th scope="col">Обновлені в</th>
+                                <th>Дії</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -60,19 +60,19 @@
                                     <td>{{ $answer->updated_at }}</td>
                                     <td>
                                         <a class="badge badge-primary pl-2 pr-2 pt-1 pb-1"
-                                           href="{{ route('dashboard.answers.edit', $answer->id) }}">Edit</a>
+                                           href="{{ route('dashboard.answers.edit', $answer->id) }}">Редагувати</a>
                                         <form id="destroy-form"
                                               action="{{ route('dashboard.answers.destroy', $answer->id) }}"
                                               method="POST">
                                             @csrf
                                             @method('delete')
-                                            <button class="badge badge-danger pl-2 pr-2 pt-1 pb-1" type="submit">Delete
+                                            <button class="badge badge-danger pl-2 pr-2 pt-1 pb-1" type="submit">Видалити
                                             </button>
                                         </form>
                                     </td>
                                 </tr>
                             @empty
-                                <p>Ответов к данному вопросу пока не добавлено</p>
+                                <p>Відповіді для обранного питання ще не додані</p>
                             @endforelse
                             </tbody>
                         </table>
@@ -82,7 +82,7 @@
         </tr>
 
     @empty
-        <p>Вопросы еще не были добавлены в данный тест</p>
+        <p>Питання ще не були додані до цього тесту</p>
     @endforelse
     </tbody>
 </table>

@@ -1,14 +1,14 @@
 @extends('dashboard.layouts.default')
 
-@section('title', 'Edit test')
+@section('title', 'Перегляд тесту')
 
 @section('dashboard-content')
     @parent
     <div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">View test #{{ $test->id }}</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Адмінка</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Перегляд тесту #{{ $test->id }}</li>
             </ol>
         </nav>
     </div>

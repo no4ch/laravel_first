@@ -1,25 +1,25 @@
 @extends('dashboard.layouts.default')
 
-@section('title', 'Dashboard')
+@section('title', 'Групи')
 
 @section('dashboard-content')
     @parent
     <div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Groups</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.') }}">Адмінка</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Групи</li>
             </ol>
         </nav>
     </div>
     <div
         class="mb-3 border-bottom">
-        <h1>Groups</h1>
+        <h1>Групи</h1>
     </div>
 
     @if(!empty($groups))
         <div class="pb-3">
-            <a class="btn btn-primary btn-lg" href="{{ route('dashboard.groups.create') }}" role="button">Add Group</a>
+            <a class="btn btn-primary btn-lg" href="{{ route('dashboard.groups.create') }}" role="button">Створити групу</a>
         </div>
 
         <div class="container-fluid">
@@ -27,8 +27,8 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Actions</th>
+                    <th>Ім'я</th>
+                    <th>Дії</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,7 +42,7 @@
                                   method="POST">
                                 @csrf
                                 @method('delete')
-                                <button class="btn btn-danger pl-2 pr-2 pt-1 pb-1" type="submit">Delete
+                                <button class="btn btn-danger pl-2 pr-2 pt-1 pb-1" type="submit">Видалити
                                 </button>
                             </form>
                         </td>
