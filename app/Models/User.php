@@ -54,11 +54,11 @@ class User extends Authenticatable
 
     public function results()
     {
-        return $this->hasMany(Result::class);
+        return $this->belongsToMany(Result::class, 'result_test_user');
     }
 
     public function tests()
     {
-        return $this->belongsToMany(Test::class, 'results');
+        return $this->belongsToMany(Test::class, 'result_test_user');
     }
 }

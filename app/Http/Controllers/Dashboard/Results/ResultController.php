@@ -21,17 +21,27 @@ class ResultController extends Controller
      */
     public function index()
     {
-        $groups = Group::with('users.tests.results')
-            ->with(['users.tests' => function($q) {
-                $q->distinct();
-            }])
-            ->with(['users' => function($q) {
-                $q->select('name', 'id', 'group_id', 'role')->orderBy('name');
-            }])
-            ->get();
-        //dd($groups);
+        $results = Group::with([
+            'users.results' => function ($q) {
+                $q
+                    ->select('tests.name', 'tests.id as test_id', 'results.*')
+                    ->join('tests', 'result_test_user.test_id', '=', 'tests.id');
+            }
+        ])->get();
 
-        return view('dashboard.results.index', compact('groups'));
+//        $results = Group::with([
+//            'users.results.tests' => function ($q) {
+//                //$q->distinct()->first();
+//            }])
+//            ->with([
+//                'users.results' => function ($q) {
+//                    //$q->distinct()->select( 'results.*');
+//                }
+//            ])
+//            ->with('users')
+//            ->get();
+
+        return view('dashboard.results.index', compact('results'));
     }
 
     /**

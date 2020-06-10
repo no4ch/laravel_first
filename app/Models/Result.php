@@ -8,9 +8,9 @@ class Result extends Model
 {
     protected $guarded = [];
 
-    public function test()
+    public function tests()
     {
-        return $this->belongsTo(Test::class);
+        return $this->belongsToMany(Test::class, 'result_test_user');
     }
 
     public function group()
@@ -18,8 +18,8 @@ class Result extends Model
         return $this->belongsTo(Group::class);
     }
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class, 'result_test_user');
     }
 }

@@ -12,13 +12,13 @@ class ResultController extends Controller
     {
         $user = User::select('name', 'id', 'group_id', 'role')
             ->where('id', auth()->user()->id)
-            ->with(['tests.results' => function($q) {
-                $q->where('group_id', auth()->user()->group_id)
-                ->where('user_id', auth()->user()->id);
-            }])
-            ->with(['tests' => function($q) {
-                $q->distinct('tests.id');
-            }])
+            ->with([
+                'results' => function ($q) {
+                    $q->distinct()
+                        ->select('tests.name', 'tests.id as test_id', 'results.*')
+                        ->join('tests', 'result_test_user.test_id', '=', 'tests.id');
+                }
+            ])
             ->first();
         //dd($user);
 

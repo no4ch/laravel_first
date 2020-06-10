@@ -15,17 +15,18 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->integer('answers');
-            $table->integer('right_answers');
-            $table->float('percent');
-            $table->unsignedBigInteger('group_id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('test_id');
+            $table->integer('answers')->nullable();
+            $table->integer('right_answers')->nullable();
+            $table->float('percent')->nullable();
+            $table->text('essay')->nullable();
+//            $table->unsignedBigInteger('group_id');
+//            $table->unsignedBigInteger('user_id');
+//            $table->unsignedBigInteger('test_id');
             $table->timestamps();
 
-            $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
+//            $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+//            $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
         });
     }
 

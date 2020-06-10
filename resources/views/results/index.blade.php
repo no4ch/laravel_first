@@ -20,18 +20,13 @@
             </tr>
             </thead>
             <tbody>
-            @forelse($user->tests as $test)
-
-                @forelse($test->results as $result)
-                    <tr>
-                        <td scope="row">{{ $test->name }}</td>
-                        <td>{{ $result->answers }}</td>
-                        <td>{{ $result->right_answers }}</td>
-                        <td>{{ $result->percent }} %</td>
-                    </tr>
-                @empty
-                @endforelse
-
+            @forelse($user->results as $result)
+                <tr>
+                    <td scope="row">{{ $result->name }}</td>
+                    <td>{{ $result->answers }}</td>
+                    <td>{{ $result->right_answers }}</td>
+                    <td>{{ $result->percent }} %</td>
+                </tr>
             @empty
                 <tr>
                     <td colspan="4">Tests have not passed yet</td>

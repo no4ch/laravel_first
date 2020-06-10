@@ -4,8 +4,10 @@ namespace App\Models;
 
 //use http\Env\Request;
 use App\Http\Requests\Result\CheckResultsRequest;
+
+use DB;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Http\Request;
+
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -56,11 +58,11 @@ class Test extends Model
     }
 
     /**
-     * @return HasMany
+     * @return BelongsToMany
      */
     public function results()
     {
-        return $this->hasMany(Result::class);
+        return $this->belongsToMany(Result::class, 'result_test_user');
     }
 
     /**
@@ -73,7 +75,7 @@ class Test extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'results');
+        return $this->belongsToMany(User::class, 'result_test_user');
     }
 
     public function checkResults(CheckResultsRequest $request)
@@ -104,15 +106,18 @@ class Test extends Model
             }
             $i++;
         }
-        //результаты в бд
+        
         $result_data['answers'] = count($test->questions);
         $result_data['right_answers'] = $result;
         $result_data['percent'] = $result / count($test->questions) * 100;
-        $result_data['group_id'] = auth()->user()->group_id;
-        $result_data['user_id'] = auth()->user()->id;
-        $result_data['test_id'] = $test_id;
 
-        Result::create($result_data);
+        $resultUser = Result::create($result_data);
+
+        DB::table('result_test_user')->insert([
+            'user_id' => auth()->id(),
+            'test_id' => $test_id,
+            'result_id' => $resultUser->id
+        ]);
 
         //[$result, "Итерации $i"]
         return response()->json($result, 200);
